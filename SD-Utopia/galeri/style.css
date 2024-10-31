@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background: #203d64;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease; /* Transition untuk animasi */
+}
+
+.navbar.shrink {
+    padding: 10px 0;
+    background: #405268; /* Warna berubah saat shrink */
+}
+
+.navbar .logo {
+    float: left;
+    font-size: 24px;
+    margin-left: 20px;
+    transition: font-size 0.3s ease;
+}
+
+.logo {
+    position: absolute;
+    top: -5px; /* Adjust to position above navbar */
+    left: 20px;
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    z-index: 1;
+}
+
+.navbar.shrink .logo {
+    font-size: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    float: right;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff5733;
+    border-bottom: 2px solid #ff5733;
+}
+
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/galerihead.jpg) center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 5px solid orange;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.posts {
+    max-width: 1200px;
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.post-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.post-content {
+    padding: 15px;
+}
+
+.posts {
+    padding: 50px;
+}
+
+.posts h1 {
+    margin-bottom: 25px;
+}
+
+.posts p {
+    padding-bottom: 10px;
+}
+
+.kontak {
+    border-top: 3px solid orange;
+    padding: 80px 0;
+    background: #92d7ff;
+}
+
+.sosmed {
+    padding-top:30px;
+}
+.sosmed img:nth-child(1) {
+    width:50px;
+    margin-right:20px;
+}
+
+.sosmed img:nth-child(2) {
+    width:50px;
+    margin-right:20px;
+}
+
+
+.sosmed img:nth-child(3) {
+    width:50px;
+}
+
+.kontak h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+}
+
+/* Default (Desktop) */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* For screens 768px or smaller (Tablet & Smartphone) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;/* Hide by default on small screens */
+        flex-direction: column; /* Vertical layout */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when .active is added */
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle button on small screens */
+    }
+
+    .logo {
+        width: 80px; /* Adjust logo size as needed */
+    }
+
+    .post-box {
+        width: 100%; /* Full width for post boxes */
+    }
+
+    .hero h2 {
+        font-size: 1.8rem; /* Adjust font size for small screens */
+    }
+}
